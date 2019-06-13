@@ -362,6 +362,385 @@ section.inset-purp, .section.inset-purp {
   background-color: #ece9ef;
 }
 
+main .flex-grid {
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+main .flex-grid > .col,
+main .flex-grid > li {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+main .flex-grid > .col > div,
+main .flex-grid > li > div {
+  flex: 1 1 auto;
+}
+main .flex-grid > li > hr {
+  width: 100%;
+}
+main .flex-grid.grow > .col,
+main .flex-grid.grow > li {
+  flex-grow: 1 !important;
+}
+@media only screen and (min-width: 0em) {
+  main .flex-grid > .col,
+main .flex-grid > li {
+    padding: 10px;
+  }
+  main .flex-grid.sm-1 > .col,
+main .flex-grid.sm-1 > li {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  main .flex-grid.sm-2 > .col,
+main .flex-grid.sm-2 > li {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+  main .flex-grid.sm-3 > .col,
+main .flex-grid.sm-3 > li {
+    flex: 0 0 33.3333333333%;
+    width: 33.3333333333%;
+  }
+  main .flex-grid.sm-4 > .col,
+main .flex-grid.sm-4 > li {
+    flex: 0 0 25%;
+    width: 25%;
+  }
+  main .flex-grid.sm-5 > .col,
+main .flex-grid.sm-5 > li {
+    flex: 0 0 20%;
+    width: 20%;
+  }
+  main .flex-grid.sm-6 > .col,
+main .flex-grid.sm-6 > li {
+    flex: 0 0 16.6666666667%;
+    width: 16.6666666667%;
+  }
+  main .flex-grid.sm-7 > .col,
+main .flex-grid.sm-7 > li {
+    flex: 0 0 14.2857142857%;
+    width: 14.2857142857%;
+  }
+  main .flex-grid.sm-8 > .col,
+main .flex-grid.sm-8 > li {
+    flex: 0 0 12.5%;
+    width: 12.5%;
+  }
+  main .flex-grid.sm-9 > .col,
+main .flex-grid.sm-9 > li {
+    flex: 0 0 11.1111111111%;
+    width: 11.1111111111%;
+  }
+  main .flex-grid.sm-10 > .col,
+main .flex-grid.sm-10 > li {
+    flex: 0 0 10%;
+    width: 10%;
+  }
+  main .flex-grid.sm-centered {
+    justify-content: center;
+  }
+  main .flex-grid.sm-uncentered {
+    justify-content: flex-start;
+  }
+  main .flex-grid.sm-collapse > .col,
+main .flex-grid.sm-collapse > li {
+    padding: 0;
+  }
+  main .flex-grid.sm-uncollapse > .col,
+main .flex-grid.sm-uncollapse > li {
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 30em) {
+  main .flex-grid > .col,
+main .flex-grid > li {
+    padding: 15px;
+  }
+  main .flex-grid.med-1 > .col,
+main .flex-grid.med-1 > li {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  main .flex-grid.med-2 > .col,
+main .flex-grid.med-2 > li {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+  main .flex-grid.med-3 > .col,
+main .flex-grid.med-3 > li {
+    flex: 0 0 33.3333333333%;
+    width: 33.3333333333%;
+  }
+  main .flex-grid.med-4 > .col,
+main .flex-grid.med-4 > li {
+    flex: 0 0 25%;
+    width: 25%;
+  }
+  main .flex-grid.med-5 > .col,
+main .flex-grid.med-5 > li {
+    flex: 0 0 20%;
+    width: 20%;
+  }
+  main .flex-grid.med-6 > .col,
+main .flex-grid.med-6 > li {
+    flex: 0 0 16.6666666667%;
+    width: 16.6666666667%;
+  }
+  main .flex-grid.med-7 > .col,
+main .flex-grid.med-7 > li {
+    flex: 0 0 14.2857142857%;
+    width: 14.2857142857%;
+  }
+  main .flex-grid.med-8 > .col,
+main .flex-grid.med-8 > li {
+    flex: 0 0 12.5%;
+    width: 12.5%;
+  }
+  main .flex-grid.med-9 > .col,
+main .flex-grid.med-9 > li {
+    flex: 0 0 11.1111111111%;
+    width: 11.1111111111%;
+  }
+  main .flex-grid.med-10 > .col,
+main .flex-grid.med-10 > li {
+    flex: 0 0 10%;
+    width: 10%;
+  }
+  main .flex-grid.med-centered {
+    justify-content: center;
+  }
+  main .flex-grid.med-uncentered {
+    justify-content: flex-start;
+  }
+  main .flex-grid.med-collapse > .col,
+main .flex-grid.med-collapse > li {
+    padding: 0;
+  }
+  main .flex-grid.med-uncollapse > .col,
+main .flex-grid.med-uncollapse > li {
+    padding: 15px;
+  }
+}
+@media only screen and (min-width: 40em) {
+  main .flex-grid > .col,
+main .flex-grid > li {
+    padding: 15px;
+  }
+  main .flex-grid.lrg-1 > .col,
+main .flex-grid.lrg-1 > li {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  main .flex-grid.lrg-2 > .col,
+main .flex-grid.lrg-2 > li {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+  main .flex-grid.lrg-3 > .col,
+main .flex-grid.lrg-3 > li {
+    flex: 0 0 33.3333333333%;
+    width: 33.3333333333%;
+  }
+  main .flex-grid.lrg-4 > .col,
+main .flex-grid.lrg-4 > li {
+    flex: 0 0 25%;
+    width: 25%;
+  }
+  main .flex-grid.lrg-5 > .col,
+main .flex-grid.lrg-5 > li {
+    flex: 0 0 20%;
+    width: 20%;
+  }
+  main .flex-grid.lrg-6 > .col,
+main .flex-grid.lrg-6 > li {
+    flex: 0 0 16.6666666667%;
+    width: 16.6666666667%;
+  }
+  main .flex-grid.lrg-7 > .col,
+main .flex-grid.lrg-7 > li {
+    flex: 0 0 14.2857142857%;
+    width: 14.2857142857%;
+  }
+  main .flex-grid.lrg-8 > .col,
+main .flex-grid.lrg-8 > li {
+    flex: 0 0 12.5%;
+    width: 12.5%;
+  }
+  main .flex-grid.lrg-9 > .col,
+main .flex-grid.lrg-9 > li {
+    flex: 0 0 11.1111111111%;
+    width: 11.1111111111%;
+  }
+  main .flex-grid.lrg-10 > .col,
+main .flex-grid.lrg-10 > li {
+    flex: 0 0 10%;
+    width: 10%;
+  }
+  main .flex-grid.lrg-centered {
+    justify-content: center;
+  }
+  main .flex-grid.lrg-uncentered {
+    justify-content: flex-start;
+  }
+  main .flex-grid.lrg-collapse > .col,
+main .flex-grid.lrg-collapse > li {
+    padding: 0;
+  }
+  main .flex-grid.lrg-uncollapse > .col,
+main .flex-grid.lrg-uncollapse > li {
+    padding: 15px;
+  }
+}
+@media only screen and (min-width: 64em) {
+  main .flex-grid > .col,
+main .flex-grid > li {
+    padding: 15px;
+  }
+  main .flex-grid.xlrg-1 > .col,
+main .flex-grid.xlrg-1 > li {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  main .flex-grid.xlrg-2 > .col,
+main .flex-grid.xlrg-2 > li {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+  main .flex-grid.xlrg-3 > .col,
+main .flex-grid.xlrg-3 > li {
+    flex: 0 0 33.3333333333%;
+    width: 33.3333333333%;
+  }
+  main .flex-grid.xlrg-4 > .col,
+main .flex-grid.xlrg-4 > li {
+    flex: 0 0 25%;
+    width: 25%;
+  }
+  main .flex-grid.xlrg-5 > .col,
+main .flex-grid.xlrg-5 > li {
+    flex: 0 0 20%;
+    width: 20%;
+  }
+  main .flex-grid.xlrg-6 > .col,
+main .flex-grid.xlrg-6 > li {
+    flex: 0 0 16.6666666667%;
+    width: 16.6666666667%;
+  }
+  main .flex-grid.xlrg-7 > .col,
+main .flex-grid.xlrg-7 > li {
+    flex: 0 0 14.2857142857%;
+    width: 14.2857142857%;
+  }
+  main .flex-grid.xlrg-8 > .col,
+main .flex-grid.xlrg-8 > li {
+    flex: 0 0 12.5%;
+    width: 12.5%;
+  }
+  main .flex-grid.xlrg-9 > .col,
+main .flex-grid.xlrg-9 > li {
+    flex: 0 0 11.1111111111%;
+    width: 11.1111111111%;
+  }
+  main .flex-grid.xlrg-10 > .col,
+main .flex-grid.xlrg-10 > li {
+    flex: 0 0 10%;
+    width: 10%;
+  }
+  main .flex-grid.xlrg-centered {
+    justify-content: center;
+  }
+  main .flex-grid.xlrg-uncentered {
+    justify-content: flex-start;
+  }
+  main .flex-grid.xlrg-collapse > .col,
+main .flex-grid.xlrg-collapse > li {
+    padding: 0;
+  }
+  main .flex-grid.xlrg-uncollapse > .col,
+main .flex-grid.xlrg-uncollapse > li {
+    padding: 15px;
+  }
+}
+@media only screen and (min-width: 75em) {
+  main .flex-grid > .col,
+main .flex-grid > li {
+    padding: 15px;
+  }
+  main .flex-grid.xxlrg-1 > .col,
+main .flex-grid.xxlrg-1 > li {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  main .flex-grid.xxlrg-2 > .col,
+main .flex-grid.xxlrg-2 > li {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+  main .flex-grid.xxlrg-3 > .col,
+main .flex-grid.xxlrg-3 > li {
+    flex: 0 0 33.3333333333%;
+    width: 33.3333333333%;
+  }
+  main .flex-grid.xxlrg-4 > .col,
+main .flex-grid.xxlrg-4 > li {
+    flex: 0 0 25%;
+    width: 25%;
+  }
+  main .flex-grid.xxlrg-5 > .col,
+main .flex-grid.xxlrg-5 > li {
+    flex: 0 0 20%;
+    width: 20%;
+  }
+  main .flex-grid.xxlrg-6 > .col,
+main .flex-grid.xxlrg-6 > li {
+    flex: 0 0 16.6666666667%;
+    width: 16.6666666667%;
+  }
+  main .flex-grid.xxlrg-7 > .col,
+main .flex-grid.xxlrg-7 > li {
+    flex: 0 0 14.2857142857%;
+    width: 14.2857142857%;
+  }
+  main .flex-grid.xxlrg-8 > .col,
+main .flex-grid.xxlrg-8 > li {
+    flex: 0 0 12.5%;
+    width: 12.5%;
+  }
+  main .flex-grid.xxlrg-9 > .col,
+main .flex-grid.xxlrg-9 > li {
+    flex: 0 0 11.1111111111%;
+    width: 11.1111111111%;
+  }
+  main .flex-grid.xxlrg-10 > .col,
+main .flex-grid.xxlrg-10 > li {
+    flex: 0 0 10%;
+    width: 10%;
+  }
+  main .flex-grid.xxlrg-centered {
+    justify-content: center;
+  }
+  main .flex-grid.xxlrg-uncentered {
+    justify-content: flex-start;
+  }
+  main .flex-grid.xxlrg-collapse > .col,
+main .flex-grid.xxlrg-collapse > li {
+    padding: 0;
+  }
+  main .flex-grid.xxlrg-uncollapse > .col,
+main .flex-grid.xxlrg-uncollapse > li {
+    padding: 15px;
+  }
+}
+main ul.flex-grid {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  list-style: none;
+}
+
 /**
 *** csbs color themes
 **/

@@ -1,0 +1,218 @@
+//screen sizes
+$sm: 0em, 29.938em;
+$med: 30em, 39.938em;
+$lg: 40em, 63.938em;
+$xlg: 64em, 74.938em;
+$xxlg: 75em;
+
+$breakpoints: (sm: 40em, med: 64em, lrg: 90em, xlrg: 120em, xxlg: 120.063em);
+
+$gutters: (sm: 20px, med: 30px, lrg: 30px, xlrg: 30px, xxlrg: 30px);
+
+@function breakpoint($key) {
+  @if map-has-key($breakpoints, $key) {
+    @return map-get($breakpoints, $key);
+  }
+
+  @warn "`#{$key}` in $breakpoints doesn't exist";
+
+  @return null;
+}
+
+@function gutter($key) {
+  @if map-has-key($gutters, $key) {
+    @return map-get($gutters, $key);
+  }
+
+  @warn "`#{$key}` in $gutters doesn't exist.";
+
+  @return null;
+}
+
+@mixin media-query($screen) {
+  @if $screen == sm {
+    @media only screen and (min-width: nth($sm, 1)) {
+      @content;
+    }
+  }
+  @else if $screen == sm-only {
+    @media only screen and (min-width: nth($sm, 1)) and (max-width: nth($sm, 2)) {
+      @content;
+    }
+  }
+  @else if $screen == med {
+    @media only screen and (min-width: nth($med, 1)) {
+      @content;
+    }
+  }
+  @else if $screen == med-only {
+    @media only screen and (min-width: nth($med, 1)) and (max-width: nth($med, 2)) {
+      @content;
+    }
+  }
+  @else if $screen == lg {
+    @media only screen and (min-width: nth($lg, 1)) {
+      @content;
+    }
+  }
+  @else if $screen == lg-only {
+    @media only screen and (min-width: nth($lg, 1)) and (max-width: nth($lg, 2)) {
+      @content;
+    }
+  }
+  @else if $screen == xlg {
+    @media only screen and (min-width: nth($xlg, 1)) {
+      @content;
+    }
+  }
+  @else if $screen == xlg-only {
+    @media only screen and (min-width: nth($xlg, 1)) and (max-width: nth($xlg, 2)) {
+      @content;
+    }
+  }
+  @else if $screen == xxlg {
+    @media only screen and (min-width: $xxlg) {
+      @content;
+    }
+  }
+  @else if $screen == xxlg-only {
+    @media only screen and (min-width: $xxlg) {
+      @content;
+    }
+  }
+}
+
+@function calc-width($num) {
+  @return 100% / $num;
+}
+
+@function calc-span($width, $span) {
+  @return $width * $span;
+}
+
+@mixin flex-grid-span($col-width, $span, $size) {
+  &.#{$size}-span-#{$span} {
+    flex: 0 0 calc-span($col-width, $span);
+    width: calc-span($col-width, $span);
+  }
+}
+
+@mixin flex-grid-col($size, $num) {
+  &.#{$size}-#{$num} {
+    > .col,
+    > li {
+      flex: 0 0 calc-width($num);
+      width: calc-width($num);
+
+      // @if $size != "xxlrg" {
+      //   @media (max-width: breakpoint($size)) {
+      //     @for $i from 1 through $num {
+      //       @include flex-grid-span(calc-width($num), $i, $size);
+      //     }
+      //   }
+      // }
+      // @else {
+      //   @for $i from 1 through $num {
+      //     @include flex-grid-span(calc-width($num), $i, $size);
+      //   }
+      // }
+   
+    }
+  }
+}
+
+@mixin flex-grid-for-size($size) {
+  > .col,
+  > li {
+    padding: gutter($size) / 2;
+  }
+
+  @for $i from 1 through 10 {
+    @include flex-grid-col($size, $i);
+  }
+
+  &.#{$size}-centered {
+    justify-content: center;
+  }
+
+  &.#{$size}-uncentered {
+    justify-content: flex-start;
+  }
+
+  &.#{$size}-collapse {
+    > .col,
+    > li {
+      padding: 0;
+    }
+  }
+
+  &.#{$size}-uncollapse {
+    > .col,
+    > li {
+      padding: gutter($size) / 2;
+    }
+  }
+}
+
+main {
+  .flex-grid {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    > .col,
+    > li {
+      flex: 1 1 auto;
+      display: flex;
+      flex-flow: column nowrap;
+
+      > div {
+        flex: 1 1 auto;
+      }
+    }
+
+    > li {
+      > hr {
+        width: 100%;
+      }
+    }
+
+    &.grow {
+      > .col,
+      > li {
+        flex-grow: 1 !important;
+      }
+    }
+
+    @include media-query(sm) {
+      @include flex-grid-for-size(sm);
+    }
+
+
+    @include media-query(med) {
+      @include flex-grid-for-size(med);
+    }
+
+
+    @include media-query(lg) {
+      @include flex-grid-for-size(lrg);
+    }
+
+
+    @include media-query(xlg) {
+      @include flex-grid-for-size(xlrg);
+    }
+
+
+    @include media-query(xxlg) {
+      @include flex-grid-for-size(xxlrg);
+    }
+  }
+
+  ul.flex-grid {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    list-style: none;
+  }
+}
