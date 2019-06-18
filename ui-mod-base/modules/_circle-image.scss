@@ -1,15 +1,24 @@
 .circle-image {
-  border-radius: 50%;
+  margin: 30px;
+  -webkit-shape-outside: circle(50%);
+  shape-outside: circle(50%);
   &__picture-element{
 	&__image {
 	  width: 100%;
 	  border-radius: 50%;
 	}
   }
-}
-
-.circle-image--small-head-shot {
-  border: solid 4px #FFFFFF;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-  width: 150px;
+  &--left {
+	float: left;
+  }
+  &--right {
+	float: right;
+  }
+  &--small-head-shot {
+	border-radius: 50%;
+	border: solid 4px #FFFFFF;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+	width: 150px;
+	margin: 15px;
+  }
 }

@@ -30,6 +30,7 @@ section.spacer-quarter, .section.spacer-quarter {
   height: 50px;
 }
 
+/*horizontal restrictions*/
 section.text-width-limit {
   max-width: $max-char-constraint-width;
   margin: 0 auto;
@@ -72,7 +73,7 @@ section.inset-moyes, .section.inset-moyes {
   padding: 4em .9em 2em;
   background-color: rgb(246, 251,238);
 }
-section.inset-purp, .section.inset-purp {
+section.inset-wcpurp, .section.inset-wcpurp {
   padding: 4em .9em 2em;
   background-color: rgb(236,233,239);
 }

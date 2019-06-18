@@ -959,6 +959,12 @@
 .card-advisor--no-header .card-advisor__header-image {
   display: none;
 }
+.card-advisor--no-content {
+  padding-bottom: 0;
+}
+.card-advisor--no-content .card-advisor__content, .card-advisor--no-content .card-advisor__button {
+  display: none;
+}
 
 /**
 *** card-advisor themes
@@ -1624,7 +1630,7 @@ card-bio
 }
 
 /**
-*** card personel
+*** card personnel
 **/
 .card-personnel {
   margin-bottom: 2rem;
@@ -1650,6 +1656,12 @@ card-bio
   padding: 1.5em;
 }
 .card-personnel--no-header .feature-box__header-image {
+  display: none;
+}
+.card-personnel--no-content {
+  padding-bottom: 0;
+}
+.card-personnel--no-content .card-personnel__content {
   display: none;
 }
 
@@ -2053,17 +2065,26 @@ card-bio
 }
 
 .circle-image {
-  border-radius: 50%;
+  margin: 30px;
+  -webkit-shape-outside: circle(50%);
+  shape-outside: circle(50%);
 }
 .circle-image__picture-element__image {
   width: 100%;
   border-radius: 50%;
 }
-
+.circle-image--left {
+  float: left;
+}
+.circle-image--right {
+  float: right;
+}
 .circle-image--small-head-shot {
+  border-radius: 50%;
   border: solid 4px #FFFFFF;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
   width: 150px;
+  margin: 15px;
 }
 
 /**

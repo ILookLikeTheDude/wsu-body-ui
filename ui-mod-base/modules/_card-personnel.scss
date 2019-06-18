@@ -1,5 +1,5 @@
 /**
-*** card personel
+*** card personnel
 **/
 .card-personnel {
   margin-bottom: 2rem;
@@ -28,6 +28,12 @@
 
   &--no-header {
 	.feature-box__header-image {
+	  display: none;
+	}
+  }
+  &--no-content {
+	padding-bottom: 0;
+	.card-personnel__content {
 	  display: none;
 	}
   }
