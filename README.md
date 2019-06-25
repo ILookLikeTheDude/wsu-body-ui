@@ -18,8 +18,8 @@ This library was developed to allow quick implementation of UI web modules, whic
 Complete documentation currently lives as these [google docs](https://drive.google.com/drive/folders/1RqIUhGGq8k7rJWha4bTP1fAhZFGYLEZT?usp=sharing)
 
 ## Conventions
-1. Using [Semantic Versioning 2.0] (https://semver.org/) for version names and release conventions.
-2. Commit messages will conform to [Conventional Commits] (https://www.conventionalcommits.org/en/v1.0.0-beta.4/#summary) starting June 25th, 2019
+1. Using [Semantic Versioning 2.0](https://semver.org/) for version names and release conventions.
+2. Commit messages will conform to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.4/#summary) starting June 25th, 2019
 
 ## Function
 The purpose of wsu-body-ui-dev is to store dev versions of the html for the UI Modules and to generate css files for the Pattern Library.
