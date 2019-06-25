@@ -19,3 +19,8 @@ Complete documentation currently lives as these [google docs](https://drive.goog
 
 ## Function
 The purpose of wsu-body-ui-dev is to store dev versions of the html for the UI Modules and to generate css files for the Pattern Library.
+
+## Conventions
+Using Semantic Versioning 2.0 for version names and release conventions.
+
+Commit messages will conform to Conventional Commits starting June 25th, 2019
