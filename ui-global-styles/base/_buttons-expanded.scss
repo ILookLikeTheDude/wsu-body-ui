@@ -1,4 +1,6 @@
-/**** wsu main button colors ****/
+/**
+*** wsu main button colors
+**/
 .button {
   &.color-1, &.-wcpurp, &--wcpurp {
     $base-color: wsu-palette($wcpurp-colors, 1);

@@ -9,6 +9,9 @@
   }
 }
 
+/**
+*** misc classes
+**/
 .row.expanded {
   max-width: none !important;
 }
@@ -46,7 +49,20 @@
   display: none;
 }
 
-/**** wsu main button colors ****/
+.side-borders {
+  border-left: 1px solid #666;
+  border-right: 1px solid #666;
+}
+
+@media only screen and (max-width: 767px) {
+  .side-borders {
+    border-left: none;
+    border-right: none;
+  }
+}
+/**
+*** wsu main button colors
+**/
 .button.color-1, .button.-wcpurp, .button--wcpurp {
   background-color: #492365;
 }
@@ -156,10 +172,16 @@
   background-color: #694f39;
 }
 
+/**
+*** other base colors
+**/
 .light-gray--bg {
   background-color: #f3f3f3;
 }
 
+/**
+*** font sizing
+**/
 .sizeup1-3 {
   font-size: 1.3em;
 }
@@ -269,7 +291,9 @@
   font-size: 1.2em;
 }
 
-/*section padding*/
+/**
+*** section padding
+**/
 section.padded-half, .section.padded-half {
   padding: 2em 0.9em 1em;
 }
@@ -294,7 +318,9 @@ section.padded-extreme-even, .section.padded-extreme-even {
   padding: 6em 0.9em;
 }
 
-/*verticle spacers*/
+/**
+*** verticle spacers
+**/
 section.spacer, .section.spacer {
   height: 200px;
 }
@@ -307,12 +333,17 @@ section.spacer-quarter, .section.spacer-quarter {
   height: 50px;
 }
 
+/**
+***horizontal restrictions
+**/
 section.text-width-limit {
   max-width: 47.5em;
   margin: 0 auto;
 }
 
-/*colored background insets, usually lightest shade on each palette color*/
+/**
+*** colored background insets, usually lightest shade on each palette color
+**/
 .inset {
   background-color: #e8e8e8;
 }
@@ -357,11 +388,14 @@ section.inset-moyes, .section.inset-moyes {
   background-color: #f6fbee;
 }
 
-section.inset-purp, .section.inset-purp {
+section.inset-wcpurp, .section.inset-wcpurp {
   padding: 4em 0.9em 2em;
   background-color: #ece9ef;
 }
 
+/**
+*** flex-grid
+**/
 main .flex-grid {
   display: -webkit-flex;
   display: flex;

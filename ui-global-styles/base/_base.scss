@@ -7,6 +7,9 @@
   }
 }
 
+/**
+*** misc classes
+**/
 .row.expanded {
   max-width: none !important;
 }
@@ -42,4 +45,15 @@
 
 .hidden, .-hidden {
   display: none;
+}
+
+.side-borders {
+  border-left: 1px solid #666;
+  border-right: 1px solid #666;
+}
+@media only screen and (max-width: 767px) {
+  .side-borders {
+    border-left: none;
+    border-right: none;
+  }
 }

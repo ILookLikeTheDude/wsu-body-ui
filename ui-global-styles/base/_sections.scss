@@ -1,4 +1,6 @@
-/*section padding*/
+/**
+*** section padding
+**/
 section.padded-half, .section.padded-half {
   padding: $padded-half;
 }
@@ -19,7 +21,9 @@ section.padded-extreme-even, .section.padded-extreme-even {
 }
 
 
-/*verticle spacers*/
+/**
+*** verticle spacers
+**/
 section.spacer, .section.spacer {
   height: 200px;
 }
@@ -30,14 +34,18 @@ section.spacer-quarter, .section.spacer-quarter {
   height: 50px;
 }
 
-/*horizontal restrictions*/
+/**
+***horizontal restrictions
+**/
 section.text-width-limit {
   max-width: $max-char-constraint-width;
   margin: 0 auto;
 }
 
 
-/*colored background insets, usually lightest shade on each palette color*/
+/**
+*** colored background insets, usually lightest shade on each palette color
+**/
 .inset {
   background-color: #e8e8e8;
 }
