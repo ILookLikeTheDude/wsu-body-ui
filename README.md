@@ -2,7 +2,7 @@
 Codebase and documentation for the WSU UI Pattern Library
 
 ## UI Module Pattern Library
-This is a collection of UI Modules and associated styles commonly used on the Weber State University website.
+This is a collection of UI Modules and associated styles commonly used on the Weber State University website by Marketing and Communications department.
 
 It is an extension of the wsu-main.css styles.
 
@@ -17,10 +17,9 @@ This library was developed to allow quick implementation of UI web modules, whic
 ## Documentation
 Complete documentation currently lives as these [google docs](https://drive.google.com/drive/folders/1RqIUhGGq8k7rJWha4bTP1fAhZFGYLEZT?usp=sharing)
 
+## Conventions
+1. Using Semantic Versioning 2.0 for version names and release conventions.
+2. Commit messages will conform to Conventional Commits starting June 25th, 2019
+
 ## Function
 The purpose of wsu-body-ui-dev is to store dev versions of the html for the UI Modules and to generate css files for the Pattern Library.
-
-## Conventions
-Using Semantic Versioning 2.0 for version names and release conventions.
-
-Commit messages will conform to Conventional Commits starting June 25th, 2019
