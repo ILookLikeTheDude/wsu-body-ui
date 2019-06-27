@@ -1,0 +1,9 @@
+@import '../../../../ui-utilities-master/variables.scss';
+@import '../../../../ui-utilities-master/functions.scss';
+@import '../../../../ui-utilities-master/mixins.scss';
+@import '../../../../ui-utilities-master/placeholders.scss';
+
+.facts-wrapper {
+	@include bg-interchange-retina();
+	@include bg-img-placement();
+}

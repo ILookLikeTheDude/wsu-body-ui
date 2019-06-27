@@ -1,0 +1,23 @@
+/**
+*** basic fact-row
+**/
+
+.fact-row-basic {
+  font-size: 90%;
+  color: #FFF;
+  &__item {
+	//padding: 6%;
+	text-align: center;
+	&__number {
+	  font-size: 5.3em;
+	  font-family: 'tradegothicltcom-bdcn20', sans-serif;
+	  margin-bottom: 10px;
+	  line-height: 1em;
+	  margin-right: 15px;
+	}
+	&__text {
+	  font-family: 'tradegothiclt', sans-serif;
+	  font-size: 1.5em;
+	}
+  }
+}
