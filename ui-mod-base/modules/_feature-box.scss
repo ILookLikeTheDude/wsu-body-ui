@@ -5,7 +5,7 @@
   margin-bottom: 2rem;
   padding-bottom: 6%;
   background-color: #FFF;
-  @include flex-column(stretch, center);
+  @include flex-column(stretch, start);
 
   &__header-image__image {
 	width: 100%;

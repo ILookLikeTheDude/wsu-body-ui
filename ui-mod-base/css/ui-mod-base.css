@@ -1057,6 +1057,9 @@ card-bio
   align-items: stretch;
   justify-content: center;
 }
+.card-personnel__header-image__image {
+  width: 100%;
+}
 .card-personnel__title.title-override {
   background-color: #492365;
   padding: 10px;
@@ -1552,7 +1555,7 @@ color-background-box
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: center;
+  justify-content: start;
 }
 .feature-box__header-image__image {
   width: 100%;
@@ -2830,7 +2833,7 @@ a.nav-onpage-icon__link {
 **/
 .page-title-shadow {
   padding: 35px 0;
-  box-shadow: 0 6px 18px 4px rgba(129, 118, 129, 0.4);
+  box-shadow: 0 16px 17px -8px rgba(129, 118, 129, 0.4);
 }
 .page-title-shadow__text {
   text-align: center;
@@ -2967,3 +2970,5 @@ a.nav-onpage-icon__link {
 .text-box.-gray .text-box__text, .text-box--gray .text-box__text {
   color: #575047;
 }
+
+/*# sourceMappingURL=ui-mod-base.css.map */
