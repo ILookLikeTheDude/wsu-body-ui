@@ -1584,6 +1584,15 @@ color-background-box
   background-color: #492365;
   align-self: center;
 }
+.feature-box__link {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.feature-box__link__button {
+  align-self: initial;
+}
 .feature-box.-shadow {
   box-shadow: 0 0 10px 2px #ccc;
 }
