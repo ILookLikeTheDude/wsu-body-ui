@@ -260,12 +260,13 @@ function buildTest(cb) {
     src('./ui-mod-base/ui-mod-base.scss')
         .pipe(sass()).on('error', sass.logError)
         .pipe(rename('ui-mod-base-' + fileName + '.css'))
-        .pipe(dest('./ui-mod-base/css-test'));
+        //.pipe(dest('./ui-mod-base/css-test'));
+        .pipe(dest('../build-test-pages/css-test'));
     // create new module html file in test environment
     src('./ui-local-build/modules/' + fileName + '/' + fileName + '.html')
         .pipe(dest('../build-test-pages/modules/' + fileName));
     // create new module scss in test environment
-    src('./ui-local-build/modules/' + fileName + '/_' + fileName + '.scss')
+    src('./ui-local-build/modules/' + fileName + '/scss/_' + fileName + '_local.scss')
         .pipe(dest('../build-test-pages/modules/' + fileName));
     src('./ui-utilities-master/*')
         .pipe(dest('../build-test-pages/ui-utilities-master'));
@@ -323,6 +324,7 @@ function deleteTest(cb) {
             if (key === '\u0079') {
                 try {
                     fs.removeSync('./ui-mod-base/css-test');
+                    fs.removeSync('../build-test-pages/');
                     console.log('The directory css/test was removed.');
                 } catch (err) {
                     console.error(err);

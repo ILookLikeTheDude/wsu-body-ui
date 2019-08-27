@@ -14,11 +14,20 @@
   max-width: none !important;
 }
 
+/*note about title-override: it doesn't have any properties unto itself, it simply adds another level of specificity that makes it easier to override the !importants*/
 .page-title.title-override {
   color: wsu-palette($wcpurp-colors, 1);
   font-family: 'tradegothicltstd-boldext', sans-serif;
   margin: 1em;
   text-align: center;
+  font-size: 2rem;
+}
+
+.page-title--basic.title-override {
+  color: wsu-palette($wcpurp-colors, 1);
+  font-family: 'tradegothicltstd-boldext', sans-serif;
+  margin: 1em;
+  text-align: left;
   font-size: 2rem;
 }
 
