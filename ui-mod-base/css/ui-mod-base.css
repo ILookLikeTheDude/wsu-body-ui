@@ -1,4 +1,86 @@
 /**
+*** align content within container
+**/
+.-center-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.-left-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+@media only screen and (max-width: 768px) {
+  .-left-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.-right-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media only screen and (max-width: 768px) {
+  .-right-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.-center-all-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.-shadow {
+  -moz-box-shadow: 0 2px 7px 2px #a0a0a0;
+  -webkit-box-shadow: 0 2px 7px 2px #a0a0a0;
+  box-shadow: 0 2px 7px 2px #a0a0a0;
+}
+@media screen and (min-resolution: 192dpi) {
+  .-shadow {
+    -moz-box-shadow: 0 2px 7px 2px #ccc;
+    -webkit-box-shadow: 0 2px 7px 2px #ccc;
+    box-shadow: 0 2px 7px 2px #ccc;
+  }
+}
+
+.-border--dark-gray {
+  border: 1px solid #575047;
+}
+
+.-border--medium-gray {
+  border: 1px solid rgba(77, 70, 77, 0.3);
+}
+
+.-border--light-gray {
+  border: 1px solid #f3f3f3;
+}
+
+.-border--double {
+  border-color: #aba7a3;
+  border-style: double;
+}
+
+.-is-hidden {
+  display: none;
+}
+
+/**
 *** admissions-feature
 **/
 .admissions-feature {
@@ -2885,87 +2967,3 @@ a.nav-onpage-icon__link {
 .text-box.-gray .text-box__text, .text-box--gray .text-box__text {
   color: #575047;
 }
-
-/**
-*** align content within container
-**/
-.-center-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.-left-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-@media only screen and (max-width: 768px) {
-  .-left-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-.-right-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-}
-@media only screen and (max-width: 768px) {
-  .-right-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-.-center-all-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.-shadow {
-  -moz-box-shadow: 0 2px 7px 2px #a0a0a0;
-  -webkit-box-shadow: 0 2px 7px 2px #a0a0a0;
-  box-shadow: 0 2px 7px 2px #a0a0a0;
-}
-@media screen and (min-resolution: 192dpi) {
-  .-shadow {
-    -moz-box-shadow: 0 2px 7px 2px #ccc;
-    -webkit-box-shadow: 0 2px 7px 2px #ccc;
-    box-shadow: 0 2px 7px 2px #ccc;
-  }
-}
-
-.-border--dark-gray {
-  border: 1px solid #575047;
-}
-
-.-border--medium-gray {
-  border: 1px solid rgba(77, 70, 77, 0.3);
-}
-
-.-border--light-gray {
-  border: 1px solid #f3f3f3;
-}
-
-.-border--double {
-  border-color: #aba7a3;
-  border-style: double;
-}
-
-.-is-hidden {
-  display: none;
-}
-
-/*# sourceMappingURL=ui-mod-base.css.map */

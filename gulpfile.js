@@ -347,7 +347,11 @@ function deleteTest(cb) {
 
 function finalModPush(cb) {
 
-    let fileName = getFileName();
+    let fileName;
+
+    if (process.argv[3]) {
+        return fileName = getFileName();
+    }
     let versionNum = process.argv[4];
     let userAnswer = readline.createInterface({
         input: process.stdin,
@@ -366,10 +370,12 @@ function finalModPush(cb) {
             .pipe(dest('../wsu-body-ui-prod/css')); //works
         src('./ui-mod-base/css/min/*.css')
             .pipe(dest('../wsu-body-ui-prod/css')); //works
-        src('./ui-local-build/modules/' + fileName + '/*')
-            .pipe(dest('../wsu-body-ui-prod/modules/' + fileName)); // works
         src('./ui-utilities-master/*')
             .pipe(dest('../wsu-body-ui-prod/ui-utilities-master')); //works
+        if (fileName) {
+            src('./ui-local-build/modules/' + fileName + '/*')
+                .pipe(dest('../wsu-body-ui-prod/modules/' + fileName)); // works
+        }
     }
 
     //push necessary files from dev to prod and prompt user
