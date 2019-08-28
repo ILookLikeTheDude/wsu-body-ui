@@ -166,7 +166,7 @@ function undoBranch(cb) {
 
 /*****************************************  newmod  *********************************************/
 
-// Create file and folder dependencies for a new module
+// Create file and folder dependencies for a new module module
 function newMod(cb) {
 
     let fileName = process.argv[3].slice(2),
