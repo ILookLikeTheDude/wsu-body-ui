@@ -111,3 +111,13 @@
   font-family: $font-tgb;
   font-size: 1.2em;
 }
+
+.text {
+  &-squish {
+    letter-spacing: -2px;
+  }
+  &-stretch {
+    letter-spacing: 2px;
+  }
+}
+

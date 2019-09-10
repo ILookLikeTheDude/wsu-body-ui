@@ -129,7 +129,7 @@ function branchMod(cb) {
                 console.log('Git branch ' + fileName + ' created and checked out.');
                 //if yes call git function
                 branch(fileName);
-                userAnswer.close();
+                return userAnswer.close();
             } else if (key === '\u006E') {
                 console.log('You entered no.');
                 return userAnswer.close();
