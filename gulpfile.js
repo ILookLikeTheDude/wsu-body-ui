@@ -178,7 +178,11 @@ function newMod(cb) {
         console.log('A directory for the new module has been created in ui-local-build.');
     });
     // create mod scss in build
-    fs.writeFile(buildDir + '_' + fileName + '.scss','/** ' + fileName + ' local build **/ ', (err) => {
+/*    fs.writeFile(buildDir + '_' + fileName + '.scss','/!** ' + fileName + ' local build **!/ ', (err) => {
+        if (err) throw err;
+        console.log('The file ' + fileName + '.scss has been saved in ui-local-build.');
+    });*/
+    fs.writeFile(buildDir + '_' + fileName + '_local.scss','/** ' + fileName + ' local build **/ ', (err) => {
         if (err) throw err;
         console.log('The file ' + fileName + '.scss has been saved in ui-local-build.');
     });

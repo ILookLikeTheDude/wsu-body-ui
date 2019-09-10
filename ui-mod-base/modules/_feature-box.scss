@@ -5,6 +5,7 @@
   margin-bottom: 2rem;
   padding-bottom: 6%;
   background-color: #FFF;
+  box-sizing: content-box;
   @include flex-column(stretch, start);
 
   &__header-image__image {
@@ -64,7 +65,7 @@
   }
 
   &.-outline {
-	border: 1px solid rgba(77,70,77,.3);
+	border: 2px solid rgba(77,70,77,.3);
   }
 
   &.-no-content {
@@ -112,7 +113,7 @@
   }
 
   &.-outline {
-	border: 1px solid rgba(77,70,77,.3);
+	border: 2px solid rgba(77,70,77,.3);
   }
 }
 
