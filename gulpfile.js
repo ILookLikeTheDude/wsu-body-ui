@@ -34,7 +34,7 @@ function getFileName() {
 }
 
 // console log test function
-/*const logTest = function(testMessage, callback) {
+const logTest = function(testMessage, callback) {
     console.log(testMessage);
     callback();
 };
@@ -102,12 +102,14 @@ const gitMergeFlow = function (fileName, callback) {
 
 
 // runs a series of git commands for the mergemod task
-const gitMergeNode = function(fileName) {
+const gitMergeNode = function(fileName, callback) {
     require('simple-git')()
         .add('./*')
         .commit('pre-merge')
         .checkout('master')
         .mergeFromTo(fileName, 'master');
+
+    callback();
 };
 
 
@@ -309,7 +311,7 @@ function mergeMod(cb) {
         .pipe(dest('./ui-global-styles/css/min'));
 
     //run add, commit and merge git
-    gitMergeNode(fileName);
+    gitMergeNode(fileName, logTest("finished"));
 
     cb();
 }
