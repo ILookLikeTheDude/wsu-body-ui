@@ -16,7 +16,7 @@
   max-width: none !important;
 }
 
-/*note about title-override: it doesn't have any properties unto itself, it simply adds another level of specificity that makes it easier to override the !importants*/
+/*note about title-override: it doesn't have any properties unto itself, it simply adds another level of specificity that makes it easier to override the !important*/
 .page-title.title-override {
   color: #492365;
   font-family: "tradegothicltstd-boldext", sans-serif;
@@ -298,6 +298,13 @@
 .tgb-text {
   font-family: "tradegothiclt-bold", sans-serif;
   font-size: 1.2em;
+}
+
+.text-squish {
+  letter-spacing: -2px;
+}
+.text-stretch {
+  letter-spacing: 2px;
 }
 
 /**
@@ -1848,5 +1855,3 @@ main ul.flex-grid {
 .wsured-text {
   color: #a52428;
 }
-
-/*# sourceMappingURL=ui-global-styles.css.map */
