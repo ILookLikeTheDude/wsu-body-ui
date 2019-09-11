@@ -101,12 +101,13 @@ const gitMergeFlow = function (fileName, callback) {
 
 
 // runs a series of git commands for the mergemod task
-const gitMergeNode = function(fileName) {
+const gitMergeNode = function(fileName, callback) {
     require('simple-git')()
         .add('./*')
         .commit('pre-merge')
         .checkout('master')
         .mergeFromTo(fileName, 'master');
+    callback();
 };
 
 
