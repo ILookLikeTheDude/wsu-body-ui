@@ -46,7 +46,7 @@ const gitMergeTest = function (fileName, callback) {
             logTest(fileName + ' 3', callback);
         });
     });
-};*/
+};
 
 
 /********************************** git functions *******************************************/
