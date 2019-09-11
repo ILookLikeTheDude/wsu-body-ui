@@ -49,7 +49,8 @@ const gitMergeTest = function (fileName, callback) {
 };*/
 
 
-// git functions
+/********************************** git functions *******************************************/
+
 const branch = function (modName) {
     git.checkout(modName, {args:'-b'}, function (err) {
         if (err) throw err;
