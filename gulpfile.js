@@ -282,7 +282,7 @@ function buildTest(cb) {
 
 
 
-/******************************************  mergemod  *******************************************/
+/******************************************  mergemod(not working)  *******************************************/
 
 // merge mod branch back to master
 function mergeMod(cb) {
@@ -311,7 +311,7 @@ function mergeMod(cb) {
         .pipe(dest('./ui-global-styles/css/min'));
 
     //run add, commit and merge git
-    gitMergeNode(fileName, logTest("finished"));
+    gitMergeNode(fileName, logTest("finished", function(){return 0;}));
 
     cb();
 }
