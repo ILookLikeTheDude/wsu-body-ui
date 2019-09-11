@@ -1,0 +1,46 @@
+/** card-mini module **/
+
+.card-mini {
+  padding: 10px;
+  transition: all .2s ease-in-out;
+  position: relative;
+  &:hover, &:focus, &:focus-within {
+	transform: scale(1.05);
+  }
+  a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-decoration: none;
+	color: wsu-palette($wcpurp-colors, 1);
+
+	&:visited {
+	  color: wsu-palette($wcpurp-colors, 1);
+	}
+
+  }
+  &__header-image {
+	min-width: 60px;
+  }
+  &__content {
+	//padding: 10px 0 0 10px;
+	padding-left: 15px;
+	font-family: 'tradegothiclt-light', sans-serif;
+	font-size: 1em;
+	min-width: 0;
+	p {
+	  //white-space: nowrap;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	  max-height: 50px;
+	  margin-bottom: 0;
+	}
+  }
+  &__link-arrow {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 12px;
+  }
+}
+

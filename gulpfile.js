@@ -34,7 +34,7 @@ function getFileName() {
 }
 
 // console log test function
-/*const logTest = function(testMessage, callback) {
+const logTest = function(testMessage, callback) {
     console.log(testMessage);
     callback();
 };
@@ -46,10 +46,11 @@ const gitMergeTest = function (fileName, callback) {
             logTest(fileName + ' 3', callback);
         });
     });
-};*/
+};
 
 
-// git functions
+/********************************** git functions *******************************************/
+
 const branch = function (modName) {
     git.checkout(modName, {args:'-b'}, function (err) {
         if (err) throw err;
@@ -107,6 +108,10 @@ const gitMergeNode = function(fileName, callback) {
         .commit('pre-merge')
         .checkout('master')
         .mergeFromTo(fileName, 'master');
+<<<<<<< HEAD
+=======
+
+>>>>>>> card-mini
     callback();
 };
 
@@ -130,7 +135,7 @@ function branchMod(cb) {
                 console.log('Git branch ' + fileName + ' created and checked out.');
                 //if yes call git function
                 branch(fileName);
-                userAnswer.close();
+                return userAnswer.close();
             } else if (key === '\u006E') {
                 console.log('You entered no.');
                 return userAnswer.close();
@@ -179,7 +184,11 @@ function newMod(cb) {
         console.log('A directory for the new module has been created in ui-local-build.');
     });
     // create mod scss in build
-    fs.writeFile(buildDir + '_' + fileName + '.scss','/** ' + fileName + ' local build **/ ', (err) => {
+/*    fs.writeFile(buildDir + '_' + fileName + '.scss','/!** ' + fileName + ' local build **!/ ', (err) => {
+        if (err) throw err;
+        console.log('The file ' + fileName + '.scss has been saved in ui-local-build.');
+    });*/
+    fs.writeFile(buildDir + '_' + fileName + '_local.scss','/** ' + fileName + ' local build **/ ', (err) => {
         if (err) throw err;
         console.log('The file ' + fileName + '.scss has been saved in ui-local-build.');
     });
@@ -276,7 +285,7 @@ function buildTest(cb) {
 
 
 
-/******************************************  mergemod  *******************************************/
+/******************************************  mergemod(not working)  *******************************************/
 
 // merge mod branch back to master
 function mergeMod(cb) {
@@ -305,7 +314,7 @@ function mergeMod(cb) {
         .pipe(dest('./ui-global-styles/css/min'));
 
     //run add, commit and merge git
-    gitMergeNode(fileName);
+    gitMergeNode(fileName, logTest("finished", function(){return 0;}));
 
     cb();
 }

@@ -1552,6 +1552,7 @@ color-background-box
   margin-bottom: 2rem;
   padding-bottom: 6%;
   background-color: #FFF;
+  box-sizing: content-box;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -1583,6 +1584,7 @@ color-background-box
 .feature-box__button {
   background-color: #492365;
   align-self: center;
+  margin-top: auto;
 }
 .feature-box__link {
   flex: 1 1 auto;
@@ -1602,7 +1604,7 @@ color-background-box
   }
 }
 .feature-box.-outline {
-  border: 1px solid rgba(77, 70, 77, 0.3);
+  border: 2px solid rgba(77, 70, 77, 0.3);
 }
 .feature-box.-no-content {
   padding-bottom: 0;
@@ -1793,7 +1795,7 @@ color-background-box
   padding: 0.5rem 0;
 }
 .feature-box-alt.-outline {
-  border: 1px solid rgba(77, 70, 77, 0.3);
+  border: 2px solid rgba(77, 70, 77, 0.3);
 }
 
 /**
@@ -2980,4 +2982,43 @@ a.nav-onpage-icon__link {
   color: #575047;
 }
 
-/*# sourceMappingURL=ui-mod-base.css.map */
+/** card-mini module **/
+.card-mini {
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+.card-mini:hover, .card-mini:focus, .card-mini:focus-within {
+  transform: scale(1.05);
+}
+.card-mini a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #492365;
+}
+.card-mini a:visited {
+  color: #492365;
+}
+.card-mini__header-image {
+  min-width: 60px;
+}
+.card-mini__content {
+  padding-left: 15px;
+  font-family: "tradegothiclt-light", sans-serif;
+  font-size: 1em;
+  min-width: 0;
+}
+.card-mini__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 50px;
+  margin-bottom: 0;
+}
+.card-mini__link-arrow {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 12px;
+}

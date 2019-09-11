@@ -301,16 +301,25 @@ $color-names: (
 		wsuwhite: $wsuwhite-colors,
 );
 
+//
+// text
+//
 $gray-text: #575047;
 $white-text: #FFF;
 $white-title-override: #FFF !important;
 $off-white-text: #fafafa;
 
+//
+// shadows
+//
 $shadow-lo-res: 0 2px 7px 2px #a0a0a0;
 $shadow-hi-res: 0 2px 7px 2px #ccc;
 
-$light-gray-bg: #f3f3f3;
 
+//
+// misc
+//
+$light-gray-bg: #f3f3f3;
 $max-char-constraint-width: 47.5em;
 
 //
