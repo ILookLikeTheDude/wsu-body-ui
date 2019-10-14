@@ -579,7 +579,7 @@ card-bio
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 .card-module__header {
   display: flex;
@@ -615,6 +615,7 @@ card-bio
 .card-module__button {
   display: block;
   background-color: #492365;
+  margin-top: auto;
 }
 .card-module--centered .card-module__content {
   display: flex;
@@ -1552,7 +1553,6 @@ color-background-box
   margin-bottom: 2rem;
   padding-bottom: 6%;
   background-color: #FFF;
-  box-sizing: content-box;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -3022,3 +3022,5 @@ a.nav-onpage-icon__link {
   right: 10px;
   width: 12px;
 }
+
+/*# sourceMappingURL=ui-mod-base.css.map */
