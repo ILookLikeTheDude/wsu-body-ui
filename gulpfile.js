@@ -108,10 +108,7 @@ const gitMergeNode = function(fileName, callback) {
         .commit('pre-merge')
         .checkout('master')
         .mergeFromTo(fileName, 'master');
-<<<<<<< HEAD
-=======
 
->>>>>>> card-mini
     callback();
 };
 
@@ -406,9 +403,10 @@ function finalModPush(cb) {
 
         });
     }
-    cb();
 
+    cb();
     pushToProd();
+
 }
 
 

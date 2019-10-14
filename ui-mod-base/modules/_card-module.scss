@@ -5,7 +5,7 @@
   background-color: #FFF;
   margin-bottom: 16px;
   padding-bottom: 6%;
-  @include flex-column(center, center);
+  @include flex-column(center, start);
   &__header {
 	@include flex-row(center, center);
 	padding: 24px;
@@ -34,6 +34,7 @@
   &__button {
 	display: block;
 	background-color: wsu-palette($wcpurp-colors, 1);
+	margin-top: auto;
   }
   &--centered {
 	.card-module__content {
