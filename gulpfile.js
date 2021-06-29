@@ -11,7 +11,7 @@ sass.compiler = require('sass'); //use dart-sass?
 
 /**************** utility functions **********************/
 
-//attempts to retrieve either a module name passed as arg or the name of the last module created
+//utility function that attempts to retrieve either a module name passed as arg or the name of the last module created
 function getFileName() {
     const argName = process.argv[3].slice(2);
     //console.log(argName);
@@ -306,13 +306,11 @@ function mergeMod(cb) {
 
     src('./ui-global-styles/ui-global-styles.scss')
         .pipe(sass()).on('error', sass.logError)
-        .pipe( postcss([require('autoprefixer'), require('cssnano')]) )
         .pipe(rename('ui-global-styles-min.css'))
         .pipe(dest('./ui-global-styles/css/min'));
 
-    //run add, commit and merge git
+    //run add, commit and merge git (probably the part that is not working)
     gitMergeNode(fileName, logTest("finished", function(){return 0;}));
-
     cb();
 }
 
