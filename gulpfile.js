@@ -9,6 +9,7 @@ const   { src, dest }   = require('gulp'),
 
 sass.compiler = require('sass'); //use dart-sass?
 
+let noop = function(){};
 /**************** utility functions **********************/
 
 //utility function that attempts to retrieve either a module name passed as arg or the name of the last module created
@@ -41,6 +42,7 @@ const logTest = function(testMessage, callback) {
 
 // tests call stack
 const gitMergeTest = function (fileName, callback) {
+    callback = callback || noop;
     logTest(fileName + ' 1', function() {
         logTest(fileName + ' 2', function() {
             logTest(fileName + ' 3', callback);
@@ -59,6 +61,7 @@ const branch = function (modName) {
 };
 
 const gitCommit = function(callback) {
+    callback = callback || noop;
     git.commit('pre-merge', {args: '-a'}, function (err) {
         if (err) {
             console.log('commit fail');
@@ -71,6 +74,7 @@ const gitCommit = function(callback) {
 };
 
 const gitCheckout = function(callback) {
+    callback = callback || noop;
     git.checkout('master', function (err) {
         if (err) {
             throw err;
@@ -82,6 +86,7 @@ const gitCheckout = function(callback) {
 };
 
 const gitMerge = function(name, callback) {
+    callback = callback || noop;
     git.merge(name, function (err) {
         if (err) {
             throw err;
@@ -93,6 +98,7 @@ const gitMerge = function(name, callback) {
 };
 
 const gitMergeFlow = function (fileName, callback) {
+    callback = callback || noop;
     gitCommit (function() {
         gitCheckout (function() {
             gitMerge (fileName, callback);
@@ -103,6 +109,7 @@ const gitMergeFlow = function (fileName, callback) {
 
 // runs a series of git commands for the mergemod task
 const gitMergeNode = function(fileName, callback) {
+    callback = callback || noop;
     require('simple-git')()
         .add('./*')
         .commit('pre-merge')
@@ -310,7 +317,7 @@ function mergeMod(cb) {
         .pipe(dest('./ui-global-styles/css/min'));
 
     //run add, commit and merge git (probably the part that is not working)
-    gitMergeNode(fileName, logTest("finished", function(){return 0;}));
+    gitMergeNode(fileName, logTest("finished", noop), function(){});
     cb();
 }
 

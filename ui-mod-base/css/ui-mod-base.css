@@ -3024,4 +3024,12 @@ a.nav-onpage-icon__link {
   width: 12px;
 }
 
-/*# sourceMappingURL=ui-mod-base.css.map */
+/** hr-shield module **/
+.hr-shield {
+  text-align: center;
+}
+.hr-shield img {
+  width: 30px;
+  position: relative;
+  top: -35px;
+}
